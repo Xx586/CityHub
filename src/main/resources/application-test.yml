@@ -1,0 +1,10 @@
+spring:
+  flyway:
+    enabled: false
+  task:
+    scheduling:
+      enabled: false
+cityhub:
+  cache:
+    mode: multilevel
+
