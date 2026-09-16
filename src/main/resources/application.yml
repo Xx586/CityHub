@@ -10,7 +10,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://${MYSQL_HOST:127.0.0.1}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:cityhub}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&characterEncoding=utf8
     username: ${MYSQL_USER:cityhub}
-    password: ${MYSQL_PASSWORD:cityhub_dev}
+    password: ${MYSQL_PASSWORD}
   data:
     redis:
       host: ${REDIS_HOST:127.0.0.1}
@@ -80,4 +80,3 @@ logging:
     level: "%5p [traceId:%X{traceId:-}]"
   level:
     com.cityhub: info
-

@@ -87,6 +87,7 @@ UNPAID ──支付──> PAID ──核销──> USED
 
 ```bash
 cp .env.example .env
+# 先在 .env 中设置 MYSQL_PASSWORD 与 MYSQL_ROOT_PASSWORD
 docker compose up -d
 ./mvnw spring-boot:run
 ```
