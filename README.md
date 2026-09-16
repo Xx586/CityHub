@@ -1,6 +1,25 @@
-# CityHub Backend
+<div align="center">
+  <img src="docs/images/cityhub-banner.svg" alt="CityHub 项目横幅" width="100%" />
+  <h1>CityHub</h1>
+  <p>面向高并发场景的本地生活服务后端</p>
+  <p>
+    <a href="https://openjdk.org/projects/jdk/17/"><img src="https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&amp;logoColor=white" alt="Java 17" /></a>
+    <a href="https://spring.io/projects/spring-boot"><img src="https://img.shields.io/badge/Spring%20Boot-3.5.16-6DB33F?logo=springboot&amp;logoColor=white" alt="Spring Boot 3.5.16" /></a>
+    <a href="https://redis.io/"><img src="https://img.shields.io/badge/Redis-7.4-DC382D?logo=redis&amp;logoColor=white" alt="Redis 7.4" /></a>
+    <a href="https://kafka.apache.org/"><img src="https://img.shields.io/badge/Kafka-3.9-231F20?logo=apachekafka&amp;logoColor=white" alt="Kafka 3.9" /></a>
+    <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/MySQL-8.4-4479A1?logo=mysql&amp;logoColor=white" alt="MySQL 8.4" /></a>
+    <a href="https://github.com/Xx586/CityHub/actions/workflows/ci.yml"><img src="https://github.com/Xx586/CityHub/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  </p>
+  <p>
+    <a href="#三条技术主线">核心设计</a> ·
+    <a href="#系统架构">系统架构</a> ·
+    <a href="#秒杀与-kafka-可靠链路">可靠性设计</a> ·
+    <a href="#快速启动">快速启动</a> ·
+    <a href="#测试与压测">测试压测</a>
+  </p>
+</div>
 
-CityHub 是一个面向求职作品集的本地生活后端项目。项目源自黑马点评课程的业务场景，但代码已在独立仓库中使用 Java 17、Spring Boot 3.5 和 Kafka 重新设计；课程原始文件不在本仓库中。
+CityHub 是一个面向求职作品集的本地生活服务后端项目。项目源自黑马点评课程的业务场景，但代码已在独立工程中使用 Java 17、Spring Boot 3.5 和 Kafka 重新设计；课程原始文件不在本仓库中。
 
 > 当前版本的重点是可靠性设计和可验证的高并发链路，不包含 AI 客服、真实支付渠道或评论系统。`/voucher-order/{id}/pay` 是明确标注的模拟支付接口。
 
@@ -14,7 +33,7 @@ CityHub 是一个面向求职作品集的本地生活后端项目。项目源自
 
 个人完成的主要重构：包名与工程迁移、Spring Security opaque token、Caffeine/Redis 多级缓存、Lua 秒杀资格校验、Redis Outbox/Kafka 可靠订单链路、DLT 补偿、限流、订单状态机、Flyway、Testcontainers 测试与 JMeter 脚本。
 
-## 架构
+## 系统架构
 
 ```mermaid
 flowchart LR

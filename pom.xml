@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.cityhub</groupId>
-    <artifactId>cityhub-backend</artifactId>
+    <artifactId>cityhub</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>cityhub-backend</name>
+    <name>CityHub</name>
     <description>High-concurrency local lifestyle platform rebuilt from the HM Dianping learning project.</description>
 
     <properties>
